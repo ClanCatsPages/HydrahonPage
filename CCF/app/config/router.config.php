@@ -31,14 +31,4 @@ return array(
 	 */
 	'#404'	=> 'Error@404',
 	'#500'	=> 'Error@500',
-	
-	/*
-	 * The authentication module
-	 */
-	'login'				 	=> 'Auth@sign_in',
-	'logout' 				=> 'Auth@sign_out',
-	'join@auth.sign_up' 		=> 'Auth@sign_up',
-	
-	'@auth.sign_in'			=> to( 'login/', array( ':back' ) ),
-	'@auth.sign_out'			=> to( 'logout/', array( ':fingerprint' ) ),
 );

@@ -22,7 +22,7 @@
 </head>
 <body>
 <div id="header">
-	<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+	<nav class="navbar navbar-white navbar-static-top" role="navigation">
 		<div class="container">
 			
 			<div class="navbar-header">
@@ -32,23 +32,18 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="<?php echo to('/'); ?>"><?php echo App::name(); ?></a>
+				<a class="navbar-brand" href="<?php echo to('/'); ?>"><img width="40px" src="<?php echo CCAsset::uri('images/hydrahon-logo-small.png'); ?>" /></a>
 			</div>
 			
 			<div class="collapse navbar-collapse" id="ccf-navbar">
 				<ul class="nav navbar-nav">
-					<?php if ( CCAuth::valid() ) : ?>
 					<li>
-						<a href="<?php echo to( '@auth.sign_out' ); ?>">Sign Out</a>
+						<a href="/docs/">Documentation</a>
 					</li>
-					<?php else : ?>
+
 					<li>
-						<a href="<?php echo to( '@auth.sign_in' ); ?>">Sign In</a>
+						<a href="https://github.com/ClanCats/Hydrahon">Github</a>
 					</li>
-					<li>
-						<a href="<?php echo to( '@auth.sign_up' ); ?>">Sign Up</a>
-					</li>
-					<?php endif; ?>
 					
 					<?php if ( ClanCats::in_development() ) : ?>
 					<li class="dropdown">

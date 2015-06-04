@@ -1,6 +1,7 @@
-<h1>Wilkommen bei CCF 2.0</h1>
-<strong>Running: </strong><?php echo $runtime_name; ?>
-<br>
-<strong>Environment: </strong><?php echo $environment; ?>
+<div style="text-align: center;">
 
-<hr>
+	<img width="200px" src="<?php echo CCAsset::uri('images/hydrahon-logo.png'); ?>" />
+	<h1>Hydrahon</h1>
+	<p>Fast and simple Query Builder without extra bacon, written in PHP.</p>
+	
+</div>
