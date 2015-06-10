@@ -25,7 +25,8 @@ class WelcomeController extends CCViewController
 	public function action_index() 
 	{
 		$this->theme->topic = "Willkommen";
-		
+		$this->theme->white_background = false;
+
 		$this->view = $this->theme->view( 'welcome', array(
 			'runtime_name'	=> ClanCats::runtime( 'name' ),
 			'environment'	=> ClanCats::environment(),

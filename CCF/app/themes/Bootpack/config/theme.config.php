@@ -25,6 +25,11 @@ return array(
          * sidebar ( if false full container gets used )
          */
         'sidebar'	=> false,
+
+        /**
+         * Render with white background
+         */
+        'white_background' => true,
         
         /*
          * Footer appended scripts
@@ -47,6 +52,7 @@ return array(
 		// load bootstrap core
 		'css/bootstrap.min.css'		=> 'theme@style',
 		'css/style.css'				=> 'theme@style',
+        'css/animate.css'           => 'theme@style',
 
 		// add mixins
 		'less/mixins/mixins.less'		=> 'theme@style',

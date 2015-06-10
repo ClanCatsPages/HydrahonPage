@@ -10,6 +10,7 @@
 		"Packtacular": "CCF/orbit/Packtacular/",
 		"Bootstrap": "CCF/app/themes/Bootpack/",
 		"CleanRedirect": "CCF/orbit/CleanRedirect/",
-		"Dev": "CCF/orbit/Dev/"
+		"Dev": "CCF/orbit/Dev/",
+		"CCDoc": "CCF/orbit/CCDoc/"
 	}
 }

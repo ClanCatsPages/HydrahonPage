@@ -1,11 +1,30 @@
+@color-border: #dbdbdb;
+@font-weight-bold: 600;
+@color-main: #fff;
+@color-background: #3996CE;
+
 body {
-	background-color: #3996CE;
+	background-color: @color-background;
 	color: #fff;
+}
+
+.white-background {
+	background-color: #fff;
+	color: #333;
+	padding: 20px 0;
+
+	h1, h2, h3, h4 {
+		color: #555;
+	}
+}
+
+h1 {
+	display: none;
 }
 
 .navbar-white {
 	background-color: #fff;
-	color: #3996CE;
+	color: @color-background;
 
 	a.navbar-brand {
 	  padding: 5px 5px;
@@ -14,4 +33,101 @@ body {
 
 h1, h2, h3, h4 {
 	color: #fff;
+}
+
+.btn.btn-default {
+	color: #fff;
+	border-color: #fff;
+
+	&:hover {
+		color: @color-background;
+		background-color: #fff;
+	}
+}
+
+#ccf-sidenav {
+	
+	text-align: right;
+	margin-top: 18px;
+	
+	ul.nav {
+	
+		//list-style: none;
+		//padding: 0;
+		
+		li {
+			
+			&.sidebar-title {
+				text-transform: uppercase;
+				border-bottom: 1px solid @color-border;
+				margin-bottom: 10px;
+				margin-top: 20px;
+				
+				&:first-child {
+					margin-top: 0;
+				}
+			}
+			
+			&.active {
+				
+				> a {
+					font-weight: @font-weight-bold;
+					color: @color-background;
+					background-color: transparent;
+					border-right: 2px solid @color-main;
+				}
+				
+				> ul.nav {
+					height: auto;
+					opacity: 1;
+				}
+			}
+			
+			> a {
+				display: block;
+				font-size: 13px;
+				font-weight: @font-weight-bold;
+				color: #333;
+				padding: 4px 20px;
+				.transition();
+
+				&:hover {
+					color: @color-background;
+				}
+			}
+		}
+		
+		ul.nav {
+			.transition();
+			height: 0;
+			opacity: 0;
+			padding-bottom: 10px;
+			border-right: 2px solid @color-border;
+			//border-left: 2px solid @color-border;
+			
+			li a {
+				padding-top: 2px;
+				padding-bottom: 2px;
+				padding-right: 20px;
+				font-size: 12px;
+				border-right: none;
+				//border-left: 20px solid @color-border;
+				
+				&:after {
+					content: " / ";
+				}
+			}
+			
+			
+		}
+	}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 991px) {
+	#ccf-sidenav {
+		text-align: left;
+		padding-bottom: 50px;
+		border-bottom: 5px; 
+	}
 }

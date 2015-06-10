@@ -62,21 +62,23 @@
 	</nav>
 </div><!-- /#header -->
 
-<div id="main-container" class="container">
-	<?php echo UI\Alert::render(); ?>
-	<div>
-		<?php if ( $sidebar !== false ) : ?>
-		<div class="row">
-			<div class="col-md-3">
-				<?php echo $sidebar; ?>
+<div class="<?php if ($white_background) : ?>white-background<?php endif; ?>">
+	<div id="main-container" class="container <?php if ($white_background) : ?>white-background<?php endif; ?>">
+		<?php echo UI\Alert::render(); ?>
+		<div>
+			<?php if ( $sidebar !== false ) : ?>
+			<div class="row">
+				<div class="col-md-3">
+					<?php echo $sidebar; ?>
+				</div>
+				<div class="col-md-9">
+					<?php echo $content; ?>
+				</div>
 			</div>
-			<div class="col-md-9">
-				<?php echo $content; ?>
-			</div>
+			<?php else : ?>
+			<?php echo $content; ?>
+			<?php endif; ?>
 		</div>
-		<?php else : ?>
-		<?php echo $content; ?>
-		<?php endif; ?>
 	</div>
 </div>
 

@@ -53,6 +53,12 @@ class App extends CCApp
 		 * load the App configuration
 		 */
 		static::$config = CCConfig::create( 'app' );
+
+		/*
+		 * register the documentation
+		 */
+		$doc = \CCDoc::create();	
+		$doc->register();
 	}
 	
 	/**
