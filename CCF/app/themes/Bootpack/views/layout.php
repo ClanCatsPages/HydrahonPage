@@ -83,6 +83,7 @@
 </div>
 
 <!-- footer scripts -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js"></script>
 <?php echo CCAsset::code( 'js', 'vendor' ); ?>
 <?php echo CCAsset::code( 'js', 'theme' ); ?>
 <?php echo CCAsset::code( 'js' ); ?>
